@@ -1,19 +1,64 @@
 h1  {
   text-align: center;
+  color: white;
+
 }
 .navSection {
-  border: 2px solid black;
   height: 75px;
+  background-color: #b12737;
 }
 #clock {
   width: 70px;
   border: 2px solid black;
   text-align: center;
+  color: #e3c080;
+  background-color: green;
 }
 #turns {
   width: 60px;
   border: 2px solid black;
   text-align: center;
+  color: #e3c080;
+  background-color: green;
 }
 #startButton {
+  background-color: green;
+}
+
+#start-text{
+  color: #e3c080;
+}
+
+#clock-text{
+  color: #e3c080;
+}
+
+#turn-text{
+  color: #e3c080;
+
+}
+
+body{
+  background-color: #50424b;
+}
+.board {
+  height: 1000px;
+  width: 1000px;
+  border: 2px solid #9dbca6 ;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  background-color: #9dbca6;
+}
+.tile {
+  display: block;
+  border-radius: 4px;
+  height: 200px;
+  width: 200px;
+  background-color: #fd7336;
+  margin: 5px;
+}
+.tileContainer {
+  margin-top: 200px;
+  margin-left: 200px;
 }
