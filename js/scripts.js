@@ -14,35 +14,37 @@ function createBoard(){
   }
 };
 
-function flipTile (tile,){
+function flipTile (tile){
 
-  if (turnValues.length < 2) {
+  if ((turnValues.length < 2) && (tilesFlipped < numTiles)) {
     turnValues.push(tile.value);
     turnIds.push(tile.id);
     console.log("turnValues :"+turnValues);
+  } else if (tilesFlipped === numTiles){
+      alert("Game Over");
   }
   if (turnValues.length === 2) {
-    alert("2flips");
     var match = (turnValues[0] === turnValues[1]);
-    console.log(match);
-  }
-  if (!match) {
-    //flip the cards back over.
-    alert("no match");
+    if (!match) {
+      //flip the cards back over!
+      alert("no match");
+    } else {
+      //dont flip the cards back over.
+      alert("MATCH");
+      tilesFlipped += 2;
+      console.log("TilesFlipped " + tilesFlipped);
+    }
     turnValues=[];
     turnIds=[];
-  } else {
-    //dont flip the cards back over.
-    alert("MATCH");
-
   }
-
 }
 
 var tileValues=["A","B","A","B","C","C"];
+var numTiles = tileValues.length;
 var newTiles = [];
 var turnValues = [];
 var turnIds = [];
+var tilesFlipped = 0;
 
 
 $(document).ready(function(){
@@ -52,6 +54,7 @@ $(document).ready(function(){
     //when submit a new game values are assigned ids
     //first step is to show id
     createBoard();
+
 
     $(".col-md-2").click(function() {
 
@@ -63,10 +66,11 @@ $(document).ready(function(){
       $(this).append("value: "+newTiles[idNum].value);
 
       flipTile(newTiles[idNum]);
-
+      //$("#"+idsToFlipBack[0]).css("background-color","red");
+      //$("#"+idsToFlipBack[1]).css("background-color","red");
       //debug
-      console.log($(this));
-      console.log("id= "+ id);
+      //console.log($(this));
+      //console.log("id= "+ id);
 
     });
   });
