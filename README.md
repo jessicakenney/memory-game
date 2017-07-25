@@ -14,9 +14,9 @@ This application will be a memory game.
 | Behavior      | Input | Output |
 | ------------- | ------------- | ------------- |
 |create a board | submit new game | show 1 box |
-|display a value for the tile | click on box | A |
-|display id for the tile | click on the box | [A,tile-0]|
-|create board with 2 tiles| submit new game | show 2 boxes |
+|display a value for the tile | click on tile | A |
+|display id for the tile | click on the tile | [A,tile-0]|
+|create board with 2 tiles| submit new game | show 2 tiles |
 |display value and id for both tiles| click on boxes | [A,tile-0][B,tile-1]|
 |detect 2 tiles match | tile-0 then tile-1 click| [match]|
 |detect 2 tiles unmatched | tile-0 then tile-1 click| [no match]|

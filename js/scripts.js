@@ -13,20 +13,24 @@ $(document).ready(function(){
     event.preventDefault();
     //when submit a new game values are assigned ids
     //first step is to show id
-    var tileValues=["A"];
-
+    var tileValues=["A","B"];
+    var newTiles = [];
     //createBoard();
-    var newTile = new Tile(tileValues[0],"tile-0");
-    console.log(tileValues[0]);
-    $("#tile-0").css("background-color","red");
-    console.log("newTile value: "+newTile.value);
+    for (var i=0; i < tileValues.length; i++) {
+      newTiles[i] = new Tile(tileValues[i],"tile-"+i);
+      $("#tile-"+i).css("background-color","red");
+    }
 
     $(".col-md-4").click(function() {
-      $(this).append("value: "+newTile.value);
+      var id = $(this).attr("id");
+      var re=/\d+/;
+      var idNum = re.exec(id);
+
+      $(this).append("value: "+newTiles[idNum].value);
       console.log($(this));
       //debug
       //var id = event.target.id;
-      var id = $(this).attr("id");
+
       console.log("id= "+ id);
     });
   });
