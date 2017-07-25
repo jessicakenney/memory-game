@@ -81,8 +81,9 @@ body{
   border-radius: 4px;
   height: 150px;
   width: 150px;
-  background-color: #fd7336;
+  /*background-color: #fd7336;*/
   margin: 5px;
+  background: linear-gradient(#3f4ba7,#ec5a98);
 }
 
 .tileFront {
