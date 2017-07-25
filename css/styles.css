@@ -1,0 +1,19 @@
+h1  {
+  text-align: center;
+}
+.navSection {
+  border: 2px solid black;
+  height: 75px;
+}
+#clock {
+  width: 70px;
+  border: 2px solid black;
+  text-align: center;
+}
+#turns {
+  width: 60px;
+  border: 2px solid black;
+  text-align: center;
+}
+#startButton {
+}
