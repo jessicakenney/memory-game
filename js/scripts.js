@@ -25,7 +25,8 @@ $(document).ready(function(){
       $(this).append("value: "+newTile.value);
       console.log($(this));
       //debug
-      var id = event.target.id;
+      //var id = event.target.id;
+      var id = $(this).attr("id");
       console.log("id= "+ id);
     });
   });
