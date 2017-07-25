@@ -13,6 +13,7 @@ h1  {
   text-align: center;
   color: #e3c080;
   background-color: green;
+  margin-left: 100px;
 }
 #turns {
   width: 60px;
@@ -20,24 +21,42 @@ h1  {
   text-align: center;
   color: #e3c080;
   background-color: green;
+  margin-left: 100px;
 }
 #startButton {
   background-color: green;
+  margin-left: 120px;
 }
 
 #start-text{
   color: #e3c080;
+  margin-left: 120px;
+}
+
+#first-column{
+  /*margin-left: 10px;*/
 }
 
 #clock-text{
   color: #e3c080;
+  margin-left: 100px;
 }
 
 #turn-text{
   color: #e3c080;
+  margin-left: 100px;
 
 }
 
+.gameRules{
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 40px;
+  /*margin: 40px, 40px, 0px, 40px;*/
+}
+.jumbotron {
+  background-image: url("../img/bkgd.png");
+}
 body{
   background-color: #50424b;
 }
@@ -53,8 +72,8 @@ body{
 .tile {
   display: block;
   border-radius: 4px;
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   background-color: #fd7336;
   margin: 5px;
 }
