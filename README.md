@@ -1,23 +1,26 @@
-# movie-tickets
+# Memory Game
 
-##### Epicodus Section: JavaScript OO - Movie Tickets
+##### Epicodus Section: Intro to Programming Group Project
 
-#### By Epicodus Lessons
+### By Kimberly Lu, Jessica Sheridan, Shyamal Punekar, Beth Hansen
+
 
 ## Description
 
-This application is a demonstration of constructors and prototypes using JavaScript to create a Movie Ticket application.
+This application will be a memory game.
 
 ## Specifications:
 
 | Behavior      | Input | Output |
 | ------------- | ------------- | ------------- |
-|Select movie title | Wonder Woman | Wonder Woman |
-|Display movie release | Wonder Woman | First release |
-|Display movie times | Wonder Woman | [12:00 , 14:00, 19:00, 23:00]|
-|Select one of two movies| Planet of the apes | Planet of the apes |
-|Get user's age input| 18 | 18|
-|Show ticket price| Wonder Woman, 12:00, 18| $15.00|
+|create a board | submit new game | show 1 box |
+|display a value for the tile | click on box | A |
+|display id for the tile | click on the box | [A,tile-0]|
+|create board with 2 tiles| submit new game | show 2 boxes |
+|display value and id for both tiles| click on boxes | [A,tile-0][B,tile-1]|
+|detect 2 tiles match | tile-0 then tile-1 click| [match]|
+|detect 2 tiles unmatched | tile-0 then tile-1 click| [no match]|
+|shuffle tile values for new board | submit new game and tile-0 click| [B]|
 
 ## Setup
 
