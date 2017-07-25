@@ -4,28 +4,8 @@ h1  {
 
 }
 .navSection {
-  height: 75px;
+  height: 85px;
   background-color: #b12737;
-}
-#clock {
-  width: 70px;
-  border: 2px solid black;
-  text-align: center;
-  color: #e3c080;
-  background-color: green;
-  margin-left: 100px;
-}
-#turns {
-  width: 60px;
-  border: 2px solid black;
-  text-align: center;
-  color: #e3c080;
-  background-color: green;
-  margin-left: 100px;
-}
-#startButton {
-  background-color: green;
-  margin-left: 120px;
 }
 
 #start-text{
@@ -33,8 +13,13 @@ h1  {
   margin-left: 120px;
 }
 
-#first-column{
-  /*margin-left: 10px;*/
+
+#startButton {
+  background-color: #9dbca6;
+  margin-left: 120px;
+  color: #50424b;
+  padding: 10px;
+
 }
 
 #clock-text{
@@ -42,10 +27,28 @@ h1  {
   margin-left: 100px;
 }
 
+#clock {
+  width: 70px;
+  text-align: center;
+  color: #50424b;
+  background-color: #9dbca6;
+  margin-left: 100px;
+  padding: 10px;
+}
+
 #turn-text{
   color: #e3c080;
   margin-left: 100px;
+}
 
+#turns {
+  width: 60px;
+  /*border: 2px solid black;*/
+  text-align: center;
+  color: #50424b;
+  background-color: #9dbca6;
+  margin-left: 100px;
+  padding: 10px;
 }
 
 .gameRules{
@@ -78,6 +81,6 @@ body{
   margin: 5px;
 }
 .tileContainer {
-  margin-top: 200px;
+  margin-top: 75px;
   margin-left: 200px;
 }
