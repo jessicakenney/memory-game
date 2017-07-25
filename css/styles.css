@@ -1,0 +1,88 @@
+h1  {
+  text-align: center;
+  color: white;
+
+}
+.navSection {
+  height: 85px;
+  background-color: #b12737;
+}
+
+#start-text{
+  color: #e3c080;
+  margin-left: 120px;
+}
+
+
+#startButton {
+  background-color: #9dbca6;
+  margin-left: 120px;
+  color: #50424b;
+  padding: 10px;
+
+}
+
+#clock-text{
+  color: #e3c080;
+  margin-left: 100px;
+}
+
+#clock {
+  width: 70px;
+  text-align: center;
+  color: #50424b;
+  background-color: #9dbca6;
+  margin-left: 100px;
+  padding: 10px;
+}
+
+#turn-text{
+  color: #e3c080;
+  margin-left: 100px;
+}
+
+#turns {
+  width: 60px;
+  /*border: 2px solid black;*/
+  text-align: center;
+  color: #50424b;
+  background-color: #9dbca6;
+  margin-left: 100px;
+  padding: 10px;
+}
+
+.gameRules{
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 40px;
+  /*margin: 40px, 40px, 0px, 40px;*/
+}
+.jumbotron {
+  background-color: #f90;
+  margin-top: 20px;
+  height: 200px;
+}
+body{
+  background-color: #50424b;
+}
+.board {
+  height: 1000px;
+  width: 1000px;
+  border: 2px solid #9dbca6 ;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  background-color: #9dbca6;
+}
+.tile {
+  display: block;
+  border-radius: 4px;
+  height: 150px;
+  width: 150px;
+  background-color: #fd7336;
+  margin: 5px;
+}
+.tileContainer {
+  margin-top: 75px;
+  margin-left: 200px;
+}
