@@ -39,7 +39,7 @@ function flipTile (tile){
   }
 }
 
-var tileValues=["A","B","A","B","C","C"];
+var tileValues=["A","A","B","B","C","C","D","D","E","E","F","F","G","G","H","H"];
 var numTiles = tileValues.length;
 var newTiles = [];
 var turnValues = [];
@@ -49,14 +49,16 @@ var tilesFlipped = 0;
 
 $(document).ready(function(){
 
-  $(".board").submit(function(event){
+  $(".formButton").submit(function(event){
     event.preventDefault();
+    alert("hi");
     //when submit a new game values are assigned ids
     //first step is to show id
     createBoard();
+    $(".tileContainer").show();
 
 
-    $(".col-md-2").click(function() {
+    $(".col-md-3").click(function() {
 
       //determine which Tile is clicked to
       //retrieve the value
