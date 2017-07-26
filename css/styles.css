@@ -8,39 +8,39 @@
 
 .navSection {
   height: 95px;
-  background-color: #b12737;
+  background-color: #57D757;
 }
 
 #start-text{
-  color: #e3c080;
+  color: #004E00;
   margin-left: 160px;
 }
 
 
 #startButton {
-  background-color: #9dbca6;
+  background-color: #004E00;
   margin-left: 160px;
-  color: #50424b;
+  color: #57D757;
   padding: 10px;
 
 }
 
 #clock-text{
-  color: #e3c080;
+  color: #004E00;
   margin-left: 100px;
 }
 
 #clock {
   width: 70px;
   text-align: center;
-  color: #50424b;
-  background-color: #9dbca6;
+  color: #57D757;
+  background-color: #004E00;
   margin-left: 100px;
   padding: 10px;
 }
 
 #turn-text{
-  color: #e3c080;
+  color: #004E00;
   margin-left: 100px;
 }
 
@@ -48,8 +48,8 @@
   width: 60px;
   /*border: 2px solid black;*/
   text-align: center;
-  color: #50424b;
-  background-color: #9dbca6;
+  color: #57D757;
+  background-color: #004E00;
   margin-left: 100px;
   padding: 10px;
 }
@@ -58,6 +58,7 @@
   margin-left: 40px;
   margin-right: 40px;
   margin-top: 40px;
+  color: #004E00;
 }
 .jumbotron {
   background-color: #f90;
@@ -65,7 +66,8 @@
   height: 220px;
 }
 body{
-  background-color: #50424b;
+  /*background-color: #B7085B;*/
+  background: linear-gradient(#006D00,#27B627);
 }
 .board {
   height: 1000px;
@@ -74,16 +76,20 @@ body{
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-  background-color: #9dbca6;
+  background-color: #004E00;
+}
+
+.active{
+  background-color: #57D757;
 }
 .tile {
   display: block;
   border-radius: 4px;
   height: 150px;
   width: 150px;
-  /*background-color: #fd7336;*/
+  background-color: #fd7336;
   margin: 5px;
-  background: linear-gradient(#3f4ba7,#ec5a98);
+  /*background: linear-gradient(#680D8F,#CD008A);*/
 }
 
 .tileFront {
@@ -101,4 +107,25 @@ body{
   display:  none;
   margin-top: 75px;
   margin-left: 200px;
+}
+
+.rules-title {
+    display: block;
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+    color: #8b5cbe;
+}
+
+.rules-illustration{
+  font-family: sans-serif;
+  color: white;
+}
+
+#rules-text{
+  color: #004E00;
+  background-color: #57D757;
 }
