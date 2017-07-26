@@ -1,17 +1,22 @@
 
 
-function Tile (value,id) {
+function Tile (value,id,imgClass) {
   this.value = value;
   this.id = id;
+  this.imgClass = imgClass;
 }
 function createBoard(){
   //turn off shuffle during debug
   //tileValues.shuffle();
+  //can i just get the imageClass here to be sync'ed with vals
+  var tileImgClasses = tileValues.map(function(value) {
+    return getImageClass(value);
+  });
   for (var i=0; i < tileValues.length; i++) {
-    newTiles[i] = new Tile(tileValues[i],"tile-"+i);
+    newTiles[i] = new Tile(tileValues[i],"tile-"+i,tileImgClasses[i]);
+    console.log("newTiles "+newTiles[i].value,newTiles[i].id,newTiles[i].imgClass);
   }
 }
-
 Array.prototype.shuffle = function (){
   alert("shuffle");
   for (var index = this.length - 1; index > 0; index-- ) {
@@ -28,11 +33,14 @@ function getImageClass(value){
     var string = imageClasses[index];
     var result = /[A-H]$/.exec(string);
     var match = (value === result[0]);
-    console.log("string "+string+" foo "+result+" value "+value,match);
+    //console.log("string "+string+" foo "+result+" value "+value,match);
     if (match){
       return imageClasses[index];
     }
   }
+}
+function getIdValue(id){
+  console.log("getIdValue  "+id);
 }
 
 function flipTile (tile) {
@@ -81,7 +89,14 @@ function flipTile (tile) {
 function flipBack (id){
   console.log("flipback: "+ id);
   $("#"+id).text("");
-  $("#"+id).removeClass("tileFront");
+  //need to figure out imageClass
+  if (isDefault) {
+    $("#"+id).removeClass(defaultClass);
+  } else {
+    var val = getIdValue(id);
+    var img = getImageClass(val);
+    $("#"+id).removeClass(img);
+  }
 }
 
 var tileValues=["A","A","B","B","C","C","D","D","E","E","F","F","G","G","H","H"];
@@ -93,7 +108,7 @@ var tilesFlipped = 0;
 //using tileFront for all and .text value
 var isDefault = 1;
 var defaultClass = "tileFront";
-var imageClasses = ["img0-A","img0-A","img1-B","img1-B"];
+var imageClasses = ["img0-A","img0-A","img1-B","img1-B","img2-C","img2-C","img3-D","img3-D","img4-E","img4-E","img5-F","img5-F","img6-G","img6-G","img7-H","img7-H"];
 
 // ------------------FRONT END------------------------------------
 $(document).ready(function(){
