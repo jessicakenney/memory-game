@@ -76,35 +76,197 @@ body{
   margin-top: 20px;
   background-color: #9dbca6;
 }
-.tile {
+
+.tileContainer {
+  display:  none;
+  margin-top: 75px;
+  margin-left: 200px;
+}
+.tileFront {
   display: block;
   border-radius: 4px;
   height: 150px;
   width: 150px;
   background-color: #fd7336;
   margin: 5px;
-  /*position: relative;*/
-}
-.tile img {
-  max-width: 100%;
-  max-height: 100%;
-  vertical-align: middle;
-  /*position: absolute;*/
-  margin-top: 12px;
-}
-.tileFront {
-  background-color: white;
-  font-size: 50px;
-  padding-top: 30px;
-  text-align: center;
-}
-.bird0-A{
-  background-image: url("../img/bird.jpg");
+  background-image: url("../img/main.png");
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-.tileContainer {
-  display:  none;
-  margin-top: 75px;
-  margin-left: 200px;
+/*-------tiles-----*/
+#tile-0 {
+  display: block;
+  border-radius: 6px;
+  height: 150px;
+  width: 150px;
+  background-color: #fd7336;
+  margin: 5px;
+  background-image: url("../img/tulip.png");
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+}
+#tile-1 {
+  display: block;
+  border-radius: 6px;
+  height: 150px;
+  width: 150px;
+  background-color: #fd7336;
+  margin: 5px;
+  background-image: url("../img/tulip.png");
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+}
+#tile-2 {
+  display: block;
+  border-radius: 6px;
+  height: 150px;
+  width: 150px;
+  background-color: #fd7336;
+  margin: 5px;
+  background-image: url("../img/peonie.png");
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+}
+#tile-3 {
+  display: block;
+  border-radius: 6px;
+  height: 150px;
+  width: 150px;
+  background-color: #fd7336;
+  margin: 5px;
+  background-image: url("../img/peonie.png");
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+}
+#tile-4 {
+  display: block;
+  border-radius: 6px;
+  height: 150px;
+  width: 150px;
+  background-color: #fd7336;
+  margin: 5px;
+  background-image: url("../img/daisy.png");
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+}
+#tile-5 {
+  display: block;
+  border-radius: 6px;
+  height: 150px;
+  width: 150px;
+  background-color: #fd7336;
+  margin: 5px;
+  background-image: url("../img/daisy.png");
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+}
+#tile-6 {
+  display: block;
+  border-radius: 6px;
+  height: 150px;
+  width: 150px;
+  background-color: #fd7336;
+  margin: 5px;
+  background-image: url("../img/orchid.png");
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+}
+#tile-7 {
+  display: block;
+  border-radius: 6px;
+  height: 150px;
+  width: 150px;
+  background-color: #fd7336;
+  margin: 5px;
+  background-image: url("../img/orchid.png");
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+}
+#tile-8 {
+  display: block;
+  border-radius: 6px;
+  height: 150px;
+  width: 150px;
+  background-color: #fd7336;
+  margin: 5px;
+  background-image: url("../img/snapdragon.png");
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+}
+#tile-9 {
+  display: block;
+  border-radius: 6px;
+  height: 150px;
+  width: 150px;
+  background-color: #fd7336;
+  margin: 5px;
+  background-image: url("../img/snapdragon.png");
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+}
+#tile-10 {
+  display: block;
+  border-radius: 6px;
+  height: 150px;
+  width: 150px;
+  background-color: #fd7336;
+  margin: 5px;
+  background-image: url("../img/rose.png");
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+}
+#tile-11 {
+  display: block;
+  border-radius: 6px;
+  height: 150px;
+  width: 150px;
+  background-color: #fd7336;
+  margin: 5px;
+  background-image: url("../img/rose.png");
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+}
+#tile-12 {
+  display: block;
+  border-radius: 6px;
+  height: 150px;
+  width: 150px;
+  background-color: #fd7336;
+  margin: 5px;
+  background-image: url("../img/dahlia.png");
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+}
+#tile-13 {
+  display: block;
+  border-radius: 6px;
+  height: 150px;
+  width: 150px;
+  background-color: #fd7336;
+  margin: 5px;
+  background-image: url("../img/dahlia.png");
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+}
+#tile-14 {
+  display: block;
+  border-radius: 6px;
+  height: 150px;
+  width: 150px;
+  background-color: #fd7336;
+  margin: 5px;
+  background-image: url("../img/poppy.png");
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+}
+#tile-15 {
+  display: block;
+  border-radius: 6px;
+  height: 150px;
+  width: 150px;
+  background-color: #fd7336;
+  margin: 5px;
+  background-image: url("../img/poppy.png");
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
 }
