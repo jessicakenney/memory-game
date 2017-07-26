@@ -87,9 +87,13 @@ body{
 
 .tileFront {
   background-color: white;
+  font-size: 50px;
+  padding-top: 30px;
+  text-align: center;
 }
 
 .tileContainer {
+  display:  none;
   margin-top: 75px;
   margin-left: 200px;
 }

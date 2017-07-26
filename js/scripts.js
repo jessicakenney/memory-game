@@ -10,33 +10,48 @@ function createBoard(){
   // add shuffle tileValues function
   for (var i=0; i < tileValues.length; i++) {
     newTiles[i] = new Tile(tileValues[i],"tile-"+i);
-    console.log("newTile for loop: "+newTiles[i].value);
   }
 };
 
-function flipTile (tile){
+function flipTile (tile) {
+  //check if the tile is empty first
+  var string = $("#"+tile.id).text();
+  var empty = /^\s*$/.test(string);
+  if ((turnValues.length <= 2) && (tilesFlipped < numTiles) && empty) {
+    $("#"+tile.id).addClass("tileFront");
+    $("#"+tile.id).text(tile.value);
 
-  if ((turnValues.length < 2) && (tilesFlipped < numTiles)) {
     turnValues.push(tile.value);
     turnIds.push(tile.id);
     console.log("turnValues :"+turnValues);
-  } else if (tilesFlipped === numTiles){
-      alert("Game Over");
+    console.log("turnValueslength :"+turnValues.length);
   }
   if (turnValues.length === 2) {
     var match = (turnValues[0] === turnValues[1]);
     if (!match) {
-      //flip the cards back over!
-      alert("no match");
+      //flipBack(turnIds[0]);
+      //flipBack(turnIds[1]);
+      //setTimeout(function() {flipBack(turnIds[0])}, 700);
+      //setTimeout(function() {flipBack(turnIds[1])}, 700);
+      setTimeout(flipBack(turnIds[0]), 1000);
+      setTimeout(flipBack(turnIds[1]), 20000);
     } else {
-      //dont flip the cards back over.
-      alert("MATCH");
+      //match condition
       tilesFlipped += 2;
       console.log("TilesFlipped " + tilesFlipped);
+      if (tilesFlipped === numTiles) {
+        alert ("gameover");
+      }
     }
+    //clear
     turnValues=[];
     turnIds=[];
   }
+}
+
+function flipBack (id){
+  $("#"+id).text("");
+  $("#"+id).removeClass("tileFront");
 }
 
 var tileValues=["A","A","B","B","C","C","D","D","E","E","F","F","G","G","H","H"];
@@ -51,7 +66,6 @@ $(document).ready(function(){
 
   $(".formButton").submit(function(event){
     event.preventDefault();
-    alert("hi");
     //when submit a new game values are assigned ids
     //first step is to show id
     createBoard();
@@ -65,14 +79,11 @@ $(document).ready(function(){
       var id = $(this).attr("id");
       var re=/\d+/;
       var idNum = re.exec(id);
-      $(this).append("value: "+newTiles[idNum].value);
+      //debug
+      console.log($(this));
+      console.log(id);
 
       flipTile(newTiles[idNum]);
-      //$("#"+idsToFlipBack[0]).css("background-color","red");
-      //$("#"+idsToFlipBack[1]).css("background-color","red");
-      //debug
-      //console.log($(this));
-      //console.log("id= "+ id);
 
     });
   });
