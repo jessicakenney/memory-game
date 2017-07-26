@@ -118,7 +118,7 @@ body{
     -webkit-margin-end: 0px;
     font-weight: bold;
     color: #8b5cbe;
-    font-size: 34px;
+    font-size: 36px;
     font-family: 'Lemonada';
 }
 
@@ -127,7 +127,7 @@ body{
 }
 
 .rules-illustration{
-  font-size: 20px;
+  font-size: 26px;
   font-family: 'Cormorant Garamond', serif;
   margin: 50px;
 }
@@ -161,5 +161,9 @@ body{
   font-size: 20px;
   padding: 8px;
   margin-top: -30px;
+}
 
+.fadeInDown animated{
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
 }
