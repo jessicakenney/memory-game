@@ -1,0 +1,10 @@
+.col-md-2 {
+  display: block;
+  border: 2px solid darkgreen;
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+}
+/*.row{
+  display:none;
+}*/
