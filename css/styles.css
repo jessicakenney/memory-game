@@ -1,35 +1,33 @@
-#topHeader {
-  margin-left: 200px;
-  margin-bottom: 40px;
+.header {
+  background-image: url("../img/sky.jpg");
+  background-position: center;
+  height: 220px;
 }
-.tileBack {
-
+p {
+  padding-top: 2em;
+  padding-left: 20em;
 }
-
+h1  {
+  text-align: center;
+}
 .navSection {
   height: 95px;
   background-color: #b12737;
 }
-
 #start-text{
   color: #e3c080;
   margin-left: 120px;
 }
-
-
 #startButton {
   background-color: #9dbca6;
   margin-left: 120px;
   color: #50424b;
   padding: 10px;
-
 }
-
 #clock-text{
   color: #e3c080;
   margin-left: 100px;
 }
-
 #clock {
   width: 70px;
   text-align: center;
@@ -38,31 +36,22 @@
   margin-left: 100px;
   padding: 10px;
 }
-
 #turn-text{
   color: #e3c080;
   margin-left: 100px;
 }
-
 #turns {
   width: 60px;
-  /*border: 2px solid black;*/
   text-align: center;
   color: #50424b;
   background-color: #9dbca6;
   margin-left: 100px;
   padding: 10px;
 }
-
 .gameRules{
   margin-left: 40px;
   margin-right: 40px;
   margin-top: 40px;
-}
-.jumbotron {
-  background-color: #f90;
-  margin-top: 20px;
-  height: 220px;
 }
 body{
   background-color: #50424b;
@@ -76,7 +65,6 @@ body{
   margin-top: 20px;
   background-color: #9dbca6;
 }
-
 .tileContainer {
   display:  none;
   margin-top: 75px;
@@ -94,7 +82,7 @@ body{
   background-repeat: no-repeat;
 }
 /*-------tiles-----*/
-#tile-0 {
+.img0-a {
   display: block;
   border-radius: 6px;
   height: 150px;
@@ -105,7 +93,7 @@ body{
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-#tile-1 {
+.img0-a {
   display: block;
   border-radius: 6px;
   height: 150px;
@@ -116,7 +104,7 @@ body{
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-#tile-2 {
+.img1-b {
   display: block;
   border-radius: 6px;
   height: 150px;
@@ -127,7 +115,7 @@ body{
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-#tile-3 {
+.img1-b {
   display: block;
   border-radius: 6px;
   height: 150px;
@@ -138,7 +126,7 @@ body{
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-#tile-4 {
+.img2-c {
   display: block;
   border-radius: 6px;
   height: 150px;
@@ -149,7 +137,7 @@ body{
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-#tile-5 {
+.img2-c {
   display: block;
   border-radius: 6px;
   height: 150px;
@@ -160,7 +148,7 @@ body{
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-#tile-6 {
+.img3-d {
   display: block;
   border-radius: 6px;
   height: 150px;
@@ -171,7 +159,7 @@ body{
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-#tile-7 {
+.img3-d {
   display: block;
   border-radius: 6px;
   height: 150px;
@@ -182,7 +170,7 @@ body{
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-#tile-8 {
+.img4-e {
   display: block;
   border-radius: 6px;
   height: 150px;
@@ -193,7 +181,7 @@ body{
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-#tile-9 {
+.img4-e {
   display: block;
   border-radius: 6px;
   height: 150px;
@@ -204,7 +192,7 @@ body{
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-#tile-10 {
+.img5-f {
   display: block;
   border-radius: 6px;
   height: 150px;
@@ -215,7 +203,7 @@ body{
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-#tile-11 {
+.img5-f {
   display: block;
   border-radius: 6px;
   height: 150px;
@@ -226,7 +214,7 @@ body{
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-#tile-12 {
+.img6-g {
   display: block;
   border-radius: 6px;
   height: 150px;
@@ -237,7 +225,7 @@ body{
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-#tile-13 {
+.img6-g {
   display: block;
   border-radius: 6px;
   height: 150px;
@@ -248,7 +236,7 @@ body{
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-#tile-14 {
+.img7-f {
   display: block;
   border-radius: 6px;
   height: 150px;
@@ -259,7 +247,7 @@ body{
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-#tile-15 {
+.img7-f {
   display: block;
   border-radius: 6px;
   height: 150px;
