@@ -5,25 +5,13 @@ function Tile (value,id) {
   this.id = id;
 }
 function createBoard(){
+  //turn off shuffle during debug
   //tileValues.shuffle();
   for (var i=0; i < tileValues.length; i++) {
     newTiles[i] = new Tile(tileValues[i],"tile-"+i);
   }
-  //randomly display tiles on screen one at a time
-  // need to figure out how to "show" the individual id
-  // tileValues.forEach (function(value){
-  //   console.log("randomvalue "+value);
-  //   //we have value...figure out id
-  //   for (var i=0; i <= newTiles.length; i++){
-  //     console.log("Tile value "+newTiles[i].value);
-  //     if ( newTiles[i].value === value) {
-  //       //if we found the value display that ID
-  //       alert("display "+newTiles[i].id);
-  //       $("#"+newTiles[i].id).show();
-  //     }
-  //   }
-  // });
-};
+}
+
 Array.prototype.shuffle = function (){
   alert("shuffle");
   for (var index = this.length - 1; index > 0; index-- ) {
@@ -35,13 +23,30 @@ Array.prototype.shuffle = function (){
   }
   console.log("shuffled array: "+this);
 }
+function getImageClass(value){
+  for (var index = 0; index < imageClasses.length; index++ ) {
+    var string = imageClasses[index];
+    var result = /[A-H]$/.exec(string);
+    var match = (value === result[0]);
+    console.log("string "+string+" foo "+result+" value "+value,match);
+    if (match){
+      return imageClasses[index];
+    }
+  }
+}
 
 function flipTile (tile) {
   //check if the tile is empty first
   var string = $("#"+tile.id).text();
   var empty = /^\s*$/.test(string);
   if ((turnValues.length <= 2) && (tilesFlipped < numTiles) && empty) {
-    $("#"+tile.id).addClass("tileFront");
+    //flip tiles
+    if (isDefault){
+      $("#"+tile.id).addClass(defaultClass);
+    } else {
+      var imgClass = getImageClass(tile.value);
+      $("#"+tile.id).addClass(imgClass);
+    }
     $("#"+tile.id).text(tile.value);
 
     turnValues.push(tile.value);
@@ -85,6 +90,10 @@ var newTiles = [];
 var turnValues = [];
 var turnIds = [];
 var tilesFlipped = 0;
+//using tileFront for all and .text value
+var isDefault = 1;
+var defaultClass = "tileFront";
+var imageClasses = ["img0-A","img0-A","img1-B","img1-B"];
 
 // ------------------FRONT END------------------------------------
 $(document).ready(function(){
@@ -93,6 +102,7 @@ $(document).ready(function(){
     event.preventDefault();
     $(".tileContainer").show();
     createBoard();
+
 
     $(".col-md-3").click(function() {
 
@@ -106,7 +116,6 @@ $(document).ready(function(){
       console.log(id);
 
       flipTile(newTiles[idNum]);
-
     });
   });
 });
