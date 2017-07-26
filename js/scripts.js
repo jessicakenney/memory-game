@@ -1,17 +1,40 @@
 
+
 function Tile (value,id) {
   this.value = value;
   this.id = id;
 }
 function createBoard(){
-  //create Tiles with id and values
-  // currently using length of tileValues array to
-  //decide number of tiles.
-  // add shuffle tileValues function
+  //tileValues.shuffle();
   for (var i=0; i < tileValues.length; i++) {
     newTiles[i] = new Tile(tileValues[i],"tile-"+i);
   }
+  //randomly display tiles on screen one at a time
+  // need to figure out how to "show" the individual id
+  // tileValues.forEach (function(value){
+  //   console.log("randomvalue "+value);
+  //   //we have value...figure out id
+  //   for (var i=0; i <= newTiles.length; i++){
+  //     console.log("Tile value "+newTiles[i].value);
+  //     if ( newTiles[i].value === value) {
+  //       //if we found the value display that ID
+  //       alert("display "+newTiles[i].id);
+  //       $("#"+newTiles[i].id).show();
+  //     }
+  //   }
+  // });
 };
+Array.prototype.shuffle = function (){
+  alert("shuffle");
+  for (var index = this.length - 1; index > 0; index-- ) {
+    var randomIndex = Math.floor(Math.random() * (index + 1));
+    var temp = this[index];
+    this[index] = this[randomIndex];
+    this[randomIndex] = temp;
+    console.log(this[randomIndex],randomIndex);
+  }
+  console.log("shuffled array: "+this);
+}
 
 function flipTile (tile) {
   //check if the tile is empty first
@@ -29,27 +52,29 @@ function flipTile (tile) {
   if (turnValues.length === 2) {
     var match = (turnValues[0] === turnValues[1]);
     if (!match) {
-      //flipBack(turnIds[0]);
-      //flipBack(turnIds[1]);
-      //setTimeout(function() {flipBack(turnIds[0])}, 700);
-      //setTimeout(function() {flipBack(turnIds[1])}, 700);
-      setTimeout(flipBack(turnIds[0]), 1000);
-      setTimeout(flipBack(turnIds[1]), 20000);
+      turnIds.forEach (function(id) {
+        setTimeout(function() {flipBack(id);}, 700);
+      });
     } else {
       //match condition
       tilesFlipped += 2;
       console.log("TilesFlipped " + tilesFlipped);
       if (tilesFlipped === numTiles) {
-        alert ("gameover");
+        //alert ("gameover");
+        newTiles.forEach (function(tile){
+            flipBack(tile.id);
+        });
+        tilesFlipped = 0;
+        newTiles = [];
+        setTimeout (function () {$(".tileContainer").hide();},1000);
       }
     }
-    //clear
     turnValues=[];
     turnIds=[];
   }
 }
-
 function flipBack (id){
+  console.log("flipback: "+ id);
   $("#"+id).text("");
   $("#"+id).removeClass("tileFront");
 }
@@ -61,16 +86,13 @@ var turnValues = [];
 var turnIds = [];
 var tilesFlipped = 0;
 
-
+// ------------------FRONT END------------------------------------
 $(document).ready(function(){
 
   $(".formButton").submit(function(event){
     event.preventDefault();
-    //when submit a new game values are assigned ids
-    //first step is to show id
-    createBoard();
     $(".tileContainer").show();
-
+    createBoard();
 
     $(".col-md-3").click(function() {
 
