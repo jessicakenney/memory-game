@@ -7,7 +7,8 @@
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="css/animate.css" media="all" type="text/css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Cormorant+Garamond|Lemonada" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css" media="all" type="text/css">
     <title>Memory Game!</title>
   </head>
   <body>
@@ -20,6 +21,7 @@
         <div class="col-md-4">
           <form class="formButton" action="index.html" method="post">
             <label for="startButton" id="start-text">Start</label>
+            <br>
             <button type="submit" name="button" id="startButton">Start</button>
           </form>
         </div>
@@ -37,11 +39,17 @@
       <div class="container fadeInDown animated">
 
         <div class="board">
-          <div class="gameRules">
-            <h3>How to play card flip memory:</h3>
-            <p>A game with very few cards, so a very easy game specially designed for kids. The cards are arranged in 4 columns and 4 rows for a total of 16 cards or 8 pairs. You have to Reconstruct the pairs of cards by turning them 2 by 2. If the cards turned face up are the same (a pair) you win and the pair disappears from the game otherwise the cards are automatically turned face down and you need to make a new try. Find all the pairs in the least moves and in a shortest time. You will find the full rule of the memory game here.
-            Every time you start a new game, a random selection of the cards ensures a different game, so you can replay endlessly.</p>
-          </div>
+
+          <div class="navbar navbar-light bg-faded justify-content-between">
+           <div class="navbar-header">
+             <a href="#" class="navbar-brand mb-0"></a>
+           </div>
+           <nav class="nav nav-pills">
+             <br>
+             <a class="rules-text"id="rules-text-1" href="rules.html">Game Rules</a></li>
+             <a class="publishers-text" id="rules-text-2" href="publishers.html">Who Are We!!!</a></li>
+           </nav>
+         </div>
           <div class="tileContainer">
 
             <div class="row">

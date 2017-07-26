@@ -12,39 +12,39 @@ h1  {
 }
 .navSection {
   height: 95px;
-  background-color: #b12737;
+  background-color: #57D757;
 }
 #start-text{
-  color: #e3c080;
-  margin-left: 120px;
+  color: #004E00;
+  margin-left: 160px;
 }
 #startButton {
-  background-color: #9dbca6;
-  margin-left: 120px;
-  color: #50424b;
+  background-color: #004E00;
+  margin-left: 160px;
+  color: #57D757;
   padding: 10px;
 }
 #clock-text{
-  color: #e3c080;
+  color: #004E00;
   margin-left: 100px;
 }
 #clock {
   width: 70px;
   text-align: center;
-  color: #50424b;
-  background-color: #9dbca6;
+  color: #57D757;
+  background-color: #004E00;
   margin-left: 100px;
   padding: 10px;
 }
 #turn-text{
-  color: #e3c080;
+  color: #004E00;
   margin-left: 100px;
 }
 #turns {
   width: 60px;
   text-align: center;
-  color: #50424b;
-  background-color: #9dbca6;
+  color: #57D757;
+  background-color: #004E00;
   margin-left: 100px;
   padding: 10px;
 }
@@ -52,9 +52,15 @@ h1  {
   margin-left: 40px;
   margin-right: 40px;
   margin-top: 40px;
+  color: #004E00;
+}
+
+.gameRules p {
+  margin-left: -500px;
 }
 body{
-  background-color: #50424b;
+  /*background-color: #B7085B;*/
+  background: linear-gradient(#006D00,#27B627);
 }
 .board {
   height: 1000px;
@@ -63,7 +69,11 @@ body{
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-  background-color: #9dbca6;
+  background-color: #004E00;
+}
+
+.active{
+  background-color: #57D757;
 }
 .tileContainer {
   display:  none;
@@ -77,12 +87,10 @@ body{
   width: 150px;
   background-color: #fd7336;
   margin: 5px;
-  background-image: url("../img/main.png");
-  background-size: 150px 150px;
-  background-repeat: no-repeat;
+
 }
 /*-------tiles-----*/
-.img0-a {
+.img0-A {
   display: block;
   border-radius: 6px;
   height: 150px;
@@ -93,7 +101,7 @@ body{
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-.img0-a {
+.img0-A {
   display: block;
   border-radius: 6px;
   height: 150px;
@@ -104,7 +112,7 @@ body{
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-.img1-b {
+.img1-B {
   display: block;
   border-radius: 6px;
   height: 150px;
@@ -115,7 +123,7 @@ body{
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-.img1-b {
+.img1-B {
   display: block;
   border-radius: 6px;
   height: 150px;
@@ -126,7 +134,7 @@ body{
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-.img2-c {
+.img2-C {
   display: block;
   border-radius: 6px;
   height: 150px;
@@ -137,7 +145,7 @@ body{
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-.img2-c {
+.img2-C {
   display: block;
   border-radius: 6px;
   height: 150px;
@@ -148,7 +156,7 @@ body{
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-.img3-d {
+.img3-D {
   display: block;
   border-radius: 6px;
   height: 150px;
@@ -159,7 +167,7 @@ body{
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-.img3-d {
+.img3-D {
   display: block;
   border-radius: 6px;
   height: 150px;
@@ -170,7 +178,7 @@ body{
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-.img4-e {
+.img4-E {
   display: block;
   border-radius: 6px;
   height: 150px;
@@ -181,7 +189,7 @@ body{
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-.img4-e {
+.img4-E {
   display: block;
   border-radius: 6px;
   height: 150px;
@@ -257,4 +265,64 @@ body{
   background-image: url("../img/poppy.png");
   background-size: 150px 150px;
   background-repeat: no-repeat;
+}
+
+.rules-title {
+    display: block;
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+    color: #8b5cbe;
+    font-size: 36px;
+    font-family: 'Lemonada';
+}
+
+.rules-title, .rules-illustration{
+  color: #EDE76D;
+}
+
+.rules-illustration{
+  font-size: 26px;
+  font-family: 'Cormorant Garamond', serif;
+  text-align: center;
+
+}
+
+.rules-text{
+  color: #EDE76D;
+  background-color: #57D757;
+  margin-right: 20px;
+  height: 70px;
+  font-size: 20px;
+  padding: 8px;
+}
+
+.rules-text, .publishers-text:hover{
+  color: #FFFA00;
+  text-decoration: underline;
+
+}
+
+.rules-info{
+  color: #A67239;
+}
+
+#rules-text-1, #rules-text-2{
+  border-radius: 8px;
+}
+
+.publishers-text{
+  color: #004E00;
+  background-color: #57D757;
+  font-size: 20px;
+  padding: 8px;
+  margin-top: -30px;
+}
+
+.fadeInDown animated{
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
 }
