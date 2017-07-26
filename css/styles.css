@@ -80,12 +80,23 @@ body{
   margin-top: 75px;
   margin-left: 200px;
 }
-.tileFront {
+
+.tile {
   display: block;
   border-radius: 4px;
   height: 150px;
   width: 150px;
   background-color: #fd7336;
+  margin: 5px;
+  /*background: linear-gradient(#680D8F,#CD008A);*/
+}
+
+.tileFront {
+  display: block;
+  border-radius: 4px;
+  height: 150px;
+  width: 150px;
+  background-color: white;
   margin: 5px;
 
 }
