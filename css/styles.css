@@ -91,7 +91,11 @@ body{
   padding-top: 30px;
   text-align: center;
 }
-
+#tile-0{
+  background-image: url("../img/bird.jpg");
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+}
 .tileContainer {
   display:  none;
   margin-top: 75px;
