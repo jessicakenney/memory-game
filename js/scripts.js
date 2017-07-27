@@ -14,6 +14,11 @@ function createBoard(){
 };
 
 function flipTile (tile) {
+  //want to start clock on first click
+  if (firstClick){
+    myInterval = setInterval(function(){add();}, 1000);
+    firstClick = 0;
+  }
   //check if the tile is empty first
   var string = $("#"+tile.id).text();
   var empty = /^\s*$/.test(string);
@@ -40,6 +45,7 @@ function flipTile (tile) {
       tilesFlipped += 2;
       console.log("TilesFlipped " + tilesFlipped);
       if (tilesFlipped === numTiles) {
+        clearInterval(myInterval);
         alert ("gameover");
       }
     }
@@ -61,6 +67,7 @@ var turnValues = [];
 var turnIds = [];
 var tilesFlipped = 0;
 
+var firstClick= 1; //to start clock on firstClick
 var seconds = 0;
 var minutes = 0;
 var hours = 0;
@@ -70,23 +77,19 @@ function add() {
     if (seconds >= 60) {
       seconds = 0;
       minutes++;
+      minutes = minutes;
+      if (minutes < 10) {
+        minutes = "0" + minutes
+      }
+    }
+      if (seconds < 10) {
+        seconds = "0" + seconds;
+      }
     if (minutes >= 60) {
       minutes = 0;
       hours++;
     }
-  }
-  console.log(hours+ "hr" +minutes+ "min" +seconds + "sec ");
-  return $("#clock").text(hours + ":" + minutes + ":" + seconds);
-;
-}
-
-function timer(){
-  setInterval(function(){add();
-  }, 1000);
-
-}
-function stop() {
-  clearInterval();
+ $("#clock").text(hours + ":" + minutes + ":" + seconds);
 }
 
 
@@ -98,6 +101,7 @@ $(document).ready(function(){
     //first step is to show id
     createBoard();
     $(".tileContainer").show();
+
 
     $(".col-md-3").click(function() {
 
@@ -111,12 +115,11 @@ $(document).ready(function(){
       console.log(id);
 
       flipTile(newTiles[idNum]);
-    });
-    console.log(seconds);
-    timer();
-    stop();
-  });
-  // $("#clock").click(function() {
 
-  // });
+      // $("#clock").click(function()
+      //   alert("clockckicked")
+      //   var myInterval = setInterval(function(){add();}, 1000);
+      // });
+    });
+  });
 });
