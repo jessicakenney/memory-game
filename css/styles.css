@@ -333,10 +333,8 @@ body{
 .rules-illustration{
   font-size: 26px;
   font-family: 'Cormorant Garamond', serif;
-  text-align: center;
-  margin-left: 20px;
+  /*margin-left: 20px;*/
   font-weight: bold;
-
 }
 
 .rules-text{
