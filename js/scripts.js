@@ -27,7 +27,12 @@ function getIdValue(id){
 }
 
 function flipTile (tile) {
-  //Check if the tile is empty first
+  //want to start clock on first click
+  if (firstClick){
+    myInterval = setInterval(function(){add();}, 1000);
+    firstClick = 0;
+  }
+  //check if the tile is empty first
   var string = $("#"+tile.id).text();
   var empty = /^\s*$/.test(string);
   if ((turnValues.length <= 2) && (tilesFlipped < numTiles) && empty) {
@@ -115,6 +120,11 @@ $(document).ready(function(){
       }
 
       flipTile(newTiles[idNum]);
+
+      // $("#clock").click(function()
+      //   alert("clockckicked")
+      //   var myInterval = setInterval(function(){add();}, 1000);
+      // });
     });
   });
 });
