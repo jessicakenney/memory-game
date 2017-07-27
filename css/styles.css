@@ -1,7 +1,9 @@
 .header {
-  background-image: url("../img/sky.jpg");
+  background-image: url("../img/woodgrain4.jpg");
   background-position: center;
   height: 220px;
+  background-repeat: no-repeat;
+  
 }
 p {
   padding-top: 2em;
