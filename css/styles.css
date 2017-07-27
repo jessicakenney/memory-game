@@ -10,6 +10,9 @@ p {
 h1  {
   text-align: center;
 }
+#turn-text, #turns{
+  display: none;
+}
 .navSection {
   height: 95px;
   background-color: #57D757;
@@ -101,177 +104,193 @@ body{
 
 }
 /*-------tiles-----*/
-.img0-A {
+.img-A {
   display: block;
   border-radius: 6px;
   height: 150px;
   width: 150px;
-  background-color: #fd7336;
+  background-color: white;
+  margin: 5px;
+  background-image: url("../img/tulip.png");
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+  color: white;
+}
+.img-A {
+  display: block;
+  color: white;
+  border-radius: 6px;
+  height: 150px;
+  width: 150px;
+  background-color: white;
   margin: 5px;
   background-image: url("../img/tulip.png");
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-.img0-A {
+.img-B {
   display: block;
+  color: white;
   border-radius: 6px;
   height: 150px;
   width: 150px;
-  background-color: #fd7336;
-  margin: 5px;
-  background-image: url("../img/tulip.png");
-  background-size: 150px 150px;
-  background-repeat: no-repeat;
-}
-.img1-B {
-  display: block;
-  border-radius: 6px;
-  height: 150px;
-  width: 150px;
-  background-color: #fd7336;
+  background-color: white;
   margin: 5px;
   background-image: url("../img/peonie.png");
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-.img1-B {
+.img-B {
   display: block;
+  color: white;
   border-radius: 6px;
   height: 150px;
   width: 150px;
-  background-color: #fd7336;
+  background-color: white;
   margin: 5px;
   background-image: url("../img/peonie.png");
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-.img2-C {
+.img-C {
   display: block;
+  color: white;
   border-radius: 6px;
   height: 150px;
   width: 150px;
-  background-color: #fd7336;
+  background-color: white;
   margin: 5px;
   background-image: url("../img/daisy.png");
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-.img2-C {
+.img-C {
   display: block;
+  color: white;
   border-radius: 6px;
   height: 150px;
   width: 150px;
-  background-color: #fd7336;
+  background-color: white;
   margin: 5px;
   background-image: url("../img/daisy.png");
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-.img3-D {
+.img-D {
   display: block;
+  color: white;
   border-radius: 6px;
   height: 150px;
   width: 150px;
-  background-color: #fd7336;
+  background-color: white;
   margin: 5px;
   background-image: url("../img/orchid.png");
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-.img3-D {
+.img-D {
   display: block;
+  color: white;
   border-radius: 6px;
   height: 150px;
   width: 150px;
-  background-color: #fd7336;
+  background-color: white;
   margin: 5px;
   background-image: url("../img/orchid.png");
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-.img4-E {
+.img-E {
   display: block;
+  color: white;
   border-radius: 6px;
   height: 150px;
   width: 150px;
-  background-color: #fd7336;
+  background-color: #white;
   margin: 5px;
   background-image: url("../img/snapdragon.png");
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-.img4-E {
+.img-E {
   display: block;
+  color: white;
   border-radius: 6px;
   height: 150px;
   width: 150px;
-  background-color: #fd7336;
+  background-color: white;
   margin: 5px;
   background-image: url("../img/snapdragon.png");
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-.img5-f {
+.img-F {
   display: block;
+  color: white;
   border-radius: 6px;
   height: 150px;
   width: 150px;
-  background-color: #fd7336;
+  background-color: white;
   margin: 5px;
   background-image: url("../img/rose.png");
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-.img5-f {
+.img-F {
   display: block;
   border-radius: 6px;
+  color: white;
   height: 150px;
   width: 150px;
-  background-color: #fd7336;
+  background-color: white;
   margin: 5px;
   background-image: url("../img/rose.png");
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-.img6-g {
+.img-G {
   display: block;
+  color: white;
   border-radius: 6px;
   height: 150px;
   width: 150px;
-  background-color: #fd7336;
+  background-color: white;
   margin: 5px;
   background-image: url("../img/dahlia.png");
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-.img6-g {
+.img-G {
   display: block;
+  color: white;
   border-radius: 6px;
   height: 150px;
   width: 150px;
-  background-color: #fd7336;
+  background-color: white;
   margin: 5px;
   background-image: url("../img/dahlia.png");
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-.img7-f {
+.img-H {
   display: block;
   border-radius: 6px;
+  color: white;
   height: 150px;
   width: 150px;
-  background-color: #fd7336;
+  background-color: white;
   margin: 5px;
   background-image: url("../img/poppy.png");
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-.img7-f {
+.img-H {
   display: block;
   border-radius: 6px;
+  color: white;
   height: 150px;
   width: 150px;
-  background-color: #fd7336;
+  background-color: white;
   margin: 5px;
   background-image: url("../img/poppy.png");
   background-size: 150px 150px;
