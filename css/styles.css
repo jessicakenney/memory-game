@@ -299,6 +299,7 @@ body{
   background-repeat: no-repeat;
 }
 .gameOverPlatform {
+  display: none;
   text-align: center;
   background-image: url("../img/gameover1.jpg");
   background-repeat: no-repeat;

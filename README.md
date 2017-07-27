@@ -7,7 +7,10 @@
 
 ## Description
 
-This application will be a memory game.
+This application is a memory tile game designed for users to click on a tile to
+flip it and reveal an image to be matched with a second click. If two flips create a
+match, the tiles with stay faced up. If no match is found, the tiles will flip
+back over.
 
 ## Specifications:
 
@@ -23,14 +26,16 @@ This application will be a memory game.
 |shuffle tile values for new board | submit new game and tile-0 click| [B]|
 
 ## Setup
+git clone https://github.com/jessicakenney/memory-game.git
 
+## Support and Contact details
+email wit any questions: jessicakenney@yahoo.com,
+
+## Known Issues/Bugs
 
 ## Technologies Used
-
 JavaScript and jQuery
 
+
 ### Legal
-
-Copyright (c) 2015 **Epicodus**
-
-This software is licensed under the MIT license.
+This software is licensed under MIT Copyright (c) 2017 Jessica Sheridan

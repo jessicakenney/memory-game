@@ -9,9 +9,10 @@ function createBoard(){
   minutes = 0;
   hours = 0;
   $("#clock").text(hours + ":" + minutes + ":" + seconds);
+  $(".gameOverPlatform").hide();
 
   //Turn off shuffle during debug
-  //tileValues.shuffle();
+  tileValues.shuffle();
   for (var i=0; i < tileValues.length; i++) {
     newTiles[i] = new Tile(tileValues[i],"tile-"+i);
     if (debugMode) {console.log("newTiles "+newTiles[i].value,newTiles[i].id);}
@@ -74,12 +75,8 @@ function flipTile (tile) {
         });
         tilesFlipped = 0;
         newTiles = [];
-        // firstClick = 1;
-        // seconds = 0;
-        // minutes = 0;
-        // hours = 0;
         setTimeout (function () {$(".tileContainer").hide();},1000);
-        //$("#game-over").text("Game Complete");
+        setTimeout (function () {$(".gameOverPlatform").show();},1500);
       }
     }
     //Clear
@@ -107,7 +104,7 @@ var turnValues = [];
 var turnIds = [];
 var tilesFlipped = 0;
 var isDefault = 0;
-var debugMode = 1;
+var debugMode = 0;
 var defaultClass = "tileFront";
 var imageClasses = ["img-A","img-A","img-B","img-B","img-C","img-C","img-D","img-D","img-E","img-E","img-F","img-F","img-G","img-G","img-H","img-H"];
 
