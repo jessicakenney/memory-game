@@ -1,3 +1,7 @@
+body{
+  background: linear-gradient(#006D00,#27B627);
+}
+/*-----header------*/
 .jumbotron {
   background-image: url("../img/woodgrain4.jpg");
   background-position: center;
@@ -8,7 +12,7 @@
   font-size: 50px;
   margin-top: 30px;
   margin-bottom: 30px;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 #enhance {
   margin-left: 8em;
@@ -21,6 +25,7 @@
   font-size: 185px;
   font-weight: bolder;
 }
+/*-------navbar--------*/
 #turn-text, #turns{
   display: none;
 }
@@ -68,13 +73,59 @@
   margin-top: 40px;
   color: #004E00;
 }
-
 .gameRules p {
   margin-left: -500px;
 }
-body{
-  background: linear-gradient(#006D00,#27B627);
+.rules-title, .rules-illustration{
+  color: #EDE76D;
 }
+.rules-illustration{
+  font-size: 26px;
+  font-family: 'Cormorant Garamond', serif;
+  text-align: center;
+}
+.rules-text{
+  color: #EDE76D;
+  background-color: #57D757;
+  margin-right: 20px;
+  height: 70px;
+  font-size: 20px;
+  padding: 8px;
+}
+.rules-text, .publishers-text:hover{
+  color: #FFFA00;
+  text-decoration: underline;
+}
+.rules-info{
+  color: #A67239;
+}
+#rules-text-1, #rules-text-2{
+  border-radius: 8px;
+}
+.publishers-text{
+  color: #004E00;
+  background-color: #57D757;
+  font-size: 20px;
+  padding: 8px;
+  margin-top: -30px;
+}
+.fadeInDown animated{
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+.rules-title {
+    display: block;
+    font-size: 1.5em;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+    color: #8b5cbe;
+    font-size: 36px;
+    font-family: 'Lemonada';
+}
+/*-------board-------*/
 .board {
   height: 1000px;
   width: 1000px;
@@ -84,16 +135,15 @@ body{
   margin-top: 20px;
   background-color: #004E00;
 }
-
 .active{
   background-color: #57D757;
 }
+/*-------tiles-----*/
 .tileContainer {
   display:  none;
   margin-top: 75px;
   margin-left: 200px;
 }
-
 .tile {
   display: block;
   border-radius: 4px;
@@ -103,21 +153,6 @@ body{
   background-position: center;
   margin: 6px;
 }
-
-/*-------tiles-----*/
-.img-A {
-  display: block;
-  border-radius: 6px;
-  height: 150px;
-  width: 150px;
-  background-color: #FCF8F7  ;
-  margin: 6px;
-  background-image: url("../img/tulip.png");
-  background-size: 150px 150px;
-  background-repeat: no-repeat;
-  color: white;
-  /*box-shadow:         5px 5px 5px 0px rgba(50, 50, 50, 0.75);*/
-}
 .img-A {
   display: block;
   color: white;
@@ -127,18 +162,6 @@ body{
   background-color: white;
   margin: 6px;
   background-image: url("../img/tulip.png");
-  background-size: 150px 150px;
-  background-repeat: no-repeat;
-}
-.img-B {
-  display: block;
-  color: white;
-  border-radius: 8px;
-  height: 150px;
-  width: 150px;
-  background-color: white;
-  margin: 6px;
-  background-image: url("../img/peonie.png");
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
@@ -166,30 +189,6 @@ body{
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
-.img-C {
-  display: block;
-  color: white;
-  border-radius: 8px;
-  height: 150px;
-  width: 150px;
-  background-color: white;
-  margin: 6px;
-  background-image: url("../img/daisy.png");
-  background-size: 150px 150px;
-  background-repeat: no-repeat;
-}
-.img-D {
-  display: block;
-  color: white;
-  border-radius: 8px;
-  height: 150px;
-  width: 150px;
-  background-color: white;
-  margin: 6px;
-  background-image: url("../img/orchid.png");
-  background-size: 150px 150px;
-  background-repeat: no-repeat;
-}
 .img-D {
   display: block;
   color: white;
@@ -208,33 +207,9 @@ body{
   border-radius: 8px;
   height: 150px;
   width: 150px;
-  background-color: #white;
-  margin: 5px;
-  background-image: url("../img/snapdragon.png");
-  background-size: 150px 150px;
-  background-repeat: no-repeat;
-}
-.img-E {
-  display: block;
-  color: white;
-  border-radius: 8px;
-  height: 150px;
-  width: 150px;
   background-color: white;
   margin: 6px;
   background-image: url("../img/snapdragon.png");
-  background-size: 150px 150px;
-  background-repeat: no-repeat;
-}
-.img-F {
-  display: block;
-  color: white;
-  border-radius: 8px;
-  height: 150px;
-  width: 150px;
-  background-color: white;
-  margin: 6px;
-  background-image: url("../img/rose.png");
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
@@ -259,30 +234,6 @@ body{
   background-color: white;
   margin: 6px;
   background-image: url("../img/dahlia.png");
-  background-size: 150px 150px;
-  background-repeat: no-repeat;
-}
-.img-G {
-  display: block;
-  color: white;
-  border-radius: 8px;
-  height: 150px;
-  width: 150px;
-  background-color: white;
-  margin: 6px;
-  background-image: url("../img/dahlia.png");
-  background-size: 150px 150px;
-  background-repeat: no-repeat;
-}
-.img-H {
-  display: block;
-  border-radius: 8px;
-  color: white;
-  height: 150px;
-  width: 150px;
-  background-color: white;
-  margin: 6px;
-  background-image: url("../img/poppy.png");
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
@@ -298,6 +249,7 @@ body{
   background-size: 150px 150px;
   background-repeat: no-repeat;
 }
+/*------gameover------*/
 .gameOverPlatform {
   text-align: center;
   background-image: url("../img/gameover1.jpg");
@@ -317,64 +269,4 @@ body{
 #thankYou {
   font-size: 90px;
   font-weight: bolder;
-}
-
-.rules-title {
-    display: block;
-    font-size: 1.5em;
-    -webkit-margin-before: 0.83em;
-    -webkit-margin-after: 0.83em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-    font-weight: bold;
-    color: #8b5cbe;
-    font-size: 36px;
-    font-family: 'Lemonada';
-}
-
-.rules-title, .rules-illustration{
-  color: #EDE76D;
-}
-
-.rules-illustration{
-  font-size: 26px;
-  font-family: 'Cormorant Garamond', serif;
-  text-align: center;
-
-}
-
-.rules-text{
-  color: #EDE76D;
-  background-color: #57D757;
-  margin-right: 20px;
-  height: 70px;
-  font-size: 20px;
-  padding: 8px;
-}
-
-.rules-text, .publishers-text:hover{
-  color: #FFFA00;
-  text-decoration: underline;
-
-}
-
-.rules-info{
-  color: #A67239;
-}
-
-#rules-text-1, #rules-text-2{
-  border-radius: 8px;
-}
-
-.publishers-text{
-  color: #004E00;
-  background-color: #57D757;
-  font-size: 20px;
-  padding: 8px;
-  margin-top: -30px;
-}
-
-.fadeInDown animated{
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
 }
