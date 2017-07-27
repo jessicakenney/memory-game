@@ -3,6 +3,13 @@ function Tile (value,id) {
   this.id = id;
 }
 function createBoard(){
+
+  firstClick = 1;
+  seconds = 0.00;
+  minutes = 0;
+  hours = 0;
+  $("#clock").text(hours + ":" + minutes + ":" + seconds);
+
   //Turn off shuffle during debug
   //tileValues.shuffle();
   for (var i=0; i < tileValues.length; i++) {
@@ -27,12 +34,12 @@ function getIdValue(id){
 }
 
 function flipTile (tile) {
-  //want to start clock on first click
+  //Start clock on first click
   if (firstClick){
     myInterval = setInterval(function(){add();}, 1000);
     firstClick = 0;
   }
-  //check if the tile is empty first
+  //Check if the tile is empty first
   var string = $("#"+tile.id).text();
   var empty = /^\s*$/.test(string);
   if ((turnValues.length <= 2) && (tilesFlipped < numTiles) && empty) {
@@ -61,13 +68,18 @@ function flipTile (tile) {
       //End of game
       if (tilesFlipped === numTiles) {
         //End timer here
+        clearInterval(myInterval);
         newTiles.forEach (function(tile){
           setTimeout(function() {flipBack(tile.id);}, 500);
         });
         tilesFlipped = 0;
         newTiles = [];
+        // firstClick = 1;
+        // seconds = 0;
+        // minutes = 0;
+        // hours = 0;
         setTimeout (function () {$(".tileContainer").hide();},1000);
-        //$("#tile-5").text("Game Complete");
+        //$("#game-over").text("Game Complete");
       }
     }
     //Clear
@@ -87,6 +99,7 @@ function flipBack (id){
   $("#"+id).text("");
 }
 
+
 var tileValues=["A","A","B","B","C","C","D","D","E","E","F","F","G","G","H","H"];
 var numTiles = tileValues.length;
 var newTiles = [];
@@ -97,6 +110,32 @@ var isDefault = 0;
 var debugMode = 1;
 var defaultClass = "tileFront";
 var imageClasses = ["img-A","img-A","img-B","img-B","img-C","img-C","img-D","img-D","img-E","img-E","img-F","img-F","img-G","img-G","img-H","img-H"];
+
+var firstClick= 1; //Start clock on firstClick
+var seconds = 0;
+var minutes = 0;
+var hours = 0;
+
+function add() {
+  seconds++;
+    if (seconds >= 60) {
+      seconds = 0;
+      minutes++;
+      minutes = minutes;
+      if (minutes < 10) {
+        minutes = "0" + minutes
+      }
+    }
+      if (seconds < 10) {
+        seconds = "0" + seconds;
+      }
+    if (minutes >= 60) {
+      minutes = 0;
+      hours++;
+    }
+ $("#clock").text(hours + ":" + minutes + ":" + seconds);
+}
+
 
 // ------------------FRONT END------------------------------------
 $(document).ready(function(){
