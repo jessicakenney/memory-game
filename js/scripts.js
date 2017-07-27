@@ -61,6 +61,34 @@ var turnValues = [];
 var turnIds = [];
 var tilesFlipped = 0;
 
+var seconds = 0;
+var minutes = 0;
+var hours = 0;
+
+function add() {
+  seconds++;
+    if (seconds >= 60) {
+      seconds = 0;
+      minutes++;
+    if (minutes >= 60) {
+      minutes = 0;
+      hours++;
+    }
+  }
+  console.log(hours+ "hr" +minutes+ "min" +seconds + "sec ");
+  return $("#clock").text(hours + ":" + minutes + ":" + seconds);
+;
+}
+
+function timer(){
+  setInterval(function(){add();
+  }, 1000);
+
+}
+function stop() {
+  clearInterval();
+}
+
 
 $(document).ready(function(){
 
@@ -70,7 +98,6 @@ $(document).ready(function(){
     //first step is to show id
     createBoard();
     $(".tileContainer").show();
-
 
     $(".col-md-3").click(function() {
 
@@ -84,7 +111,12 @@ $(document).ready(function(){
       console.log(id);
 
       flipTile(newTiles[idNum]);
-
     });
+    console.log(seconds);
+    timer();
+    stop();
   });
+  // $("#clock").click(function() {
+
+  // });
 });
